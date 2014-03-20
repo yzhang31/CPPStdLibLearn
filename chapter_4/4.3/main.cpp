@@ -1,7 +1,3 @@
-// chapter_4.cpp : Defines the entry point for the console application.
-//
-
-#include "stdafx.h"
 #include <iostream>
 #include <functional>
 #include <future>
@@ -17,7 +13,7 @@ auto l = [] (int x, int y) {
 
 class C {
 public:
-    void operator () (int x, int y) const 
+    void operator () (int x, int y) const
     {
         std::cout << "call C()" << std::endl;
     };
@@ -43,10 +39,11 @@ int main()
     std::bind(&C::memfunc,c,77,33)(); // calls: c.memfunc(77,33)
     std::bind(&C::memfunc,sp,77,33)(); // calls: sp->memfunc(77,33)
     // async() uses callable objects to start (background) tasks:
-    std::async(func,42,77); // calls: func(42,77)
-    std::async(l,42,77); // calls: l(42,77)
-    std::async(c,42,77); // calls: c.operator()(42,77)
-    std::async(&C::memfunc,&c,42,77); // calls: c.memfunc(42,77)
-    std::async(&C::memfunc,sp,42,77); // calls: sp->memfunc(42,77)
+
+//    std::async(func,42,77); // calls: func(42,77)
+//    std::async(l,42,77); // calls: l(42,77)
+//    std::async(c,42,77); // calls: c.operator()(42,77)
+//    std::async(&C::memfunc,&c,42,77); // calls: c.memfunc(42,77)
+//    std::async(&C::memfunc,sp,42,77); // calls: sp->memfunc(42,77)
 }
 
