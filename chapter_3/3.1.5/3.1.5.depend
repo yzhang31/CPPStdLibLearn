@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1395116830 source:d:\dev\git\cppstdliblearn\foo\foo.cpp
+	"Foo.h"
+	<iostream>
+	<sstream>
+	<string>
+
+1395116830 d:\dev\git\cppstdliblearn\foo\foo.h
+	<string>
+
